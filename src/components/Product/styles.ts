@@ -7,6 +7,15 @@ export const Card = styled.div`
     border-radius: 8px;
     padding: 8px;
     position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    }
 
     ${TagContainer} {
         margin-right: 8px;

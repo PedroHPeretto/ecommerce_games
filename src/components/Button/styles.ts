@@ -20,4 +20,12 @@ export const ButtonLink = styled(Link)`
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 8px;
+
+    &:hover {
+        background: linear-gradient(90deg, #ff0080, #7928ca);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: 0.5s;
+    }
 `

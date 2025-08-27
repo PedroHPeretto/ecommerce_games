@@ -23,7 +23,10 @@ export const FooterLink = styled.a`
     margin-right: 8px;
 
     &:hover {
-        color: ${cores.branco};
+        background: linear-gradient(90deg, #ff0080, #7928ca);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
         transition: 0.5s;
     }
 `

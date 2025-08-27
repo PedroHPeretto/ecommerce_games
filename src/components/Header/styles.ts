@@ -13,6 +13,14 @@ export const HeaderBar = styled.header`
     a {
         color: ${cores.branco};
         font-weight: bold;
+
+        &:hover {
+            background: linear-gradient(90deg, #ff0080, #7928ca);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: 0.5s;
+        }
     }
 
     div {
