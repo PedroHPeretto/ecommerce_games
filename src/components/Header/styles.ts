@@ -18,6 +18,10 @@ export const HeaderBar = styled.header`
     div {
         display: flex;
         align-items: center;
+
+        #logo {
+            display: flex;
+        }
     }
 `
 
