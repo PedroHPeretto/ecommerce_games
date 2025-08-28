@@ -13,6 +13,7 @@ export const ButtonContainer = styled.button<Props>`
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 8px;
+    cursor: pointer;
 `
 
 export const ButtonLink = styled(Link)`
@@ -23,6 +24,7 @@ export const ButtonLink = styled(Link)`
     font-weight: bold;
     padding: 8px 16px;
     border-radius: 8px;
+    cursor: pointer;
 
     &:hover {
         background: linear-gradient(90deg, #ff0080, #7928ca);

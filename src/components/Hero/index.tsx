@@ -14,8 +14,8 @@ const Hero = () => (
             <GamesInfos>
                 <h2>Hogwarts' Legacy</h2>
                 <p>
-                    <span>De R$ 250,00</span>
-                    Por R$ 190,00
+                    <span>De R$ 290,90</span>
+                    Por R$ 190,90
                 </p>
                 <Button
                     type="button"
