@@ -1,5 +1,5 @@
 import Product from '../Product'
-import Game from '../../models/Game'
+import { Game } from '../../pages/Home'
 import { Container, List, Title } from './styles'
 
 export type Props = {
@@ -8,25 +8,49 @@ export type Props = {
     games: Game[]
 }
 
-const ProducstList = ({ title, bg, games }: Props) => (
-    <Container bg={bg}>
-        <div className="container">
-            <Title>{title}</Title>
-            <List>
-                {games.map((game) => (
-                    <Product
-                        key={game.id}
-                        category={game.category}
-                        description={game.description}
-                        img={game.img}
-                        infos={game.infos}
-                        system={game.system}
-                        title={game.title}
-                    />
-                ))}
-            </List>
-        </div>
-    </Container>
-)
+const ProducstList = ({ title, bg, games }: Props) => {
+    const formataPreco = (preco: number) => {
+        return new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(preco)
+    }
+
+    const getGameTags = (game: Game) => {
+        const tags = []
+
+        if (game.release_date) {
+            tags.push(game.release_date)
+        }
+        if (game.prices.discount) {
+            tags.push(`${game.prices.discount}%`)
+        }
+        if (game.prices.current) {
+            tags.push(formataPreco(game.prices.current))
+        }
+
+        return tags
+    }
+    return (
+        <Container bg={bg}>
+            <div className="container">
+                <Title>{title}</Title>
+                <List>
+                    {games.map((game) => (
+                        <Product
+                            key={game.id}
+                            category={game.details.category}
+                            description={game.description}
+                            img={game.media.thumbnail}
+                            infos={getGameTags(game)}
+                            system={game.details.system}
+                            title={game.name}
+                        />
+                    ))}
+                </List>
+            </div>
+        </Container>
+    )
+}
 
 export default ProducstList

@@ -6,18 +6,12 @@ import {
     Modal,
     ModalContent
 } from './styles'
+import { GalleryMock } from '../../pages/Home'
 import imageGallery from '../../assets/images/gallery_image.png'
 import imagePlay from '../../assets/images/play.png'
 import imageZoom from '../../assets/images/zoom.png'
 import ImageClose from '../../assets/images/fechar.png'
 import { useState } from 'react'
-
-interface GalleryMock {
-    type: 'image' | 'video'
-    img?: string
-    url: string
-    id?: number
-}
 
 const mock: GalleryMock[] = [
     {
