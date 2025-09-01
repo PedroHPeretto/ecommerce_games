@@ -4,9 +4,7 @@ import { useEffect, useState } from 'react'
 
 export interface GalleryMock {
     type: 'image' | 'video'
-    img?: string
     url: string
-    id?: number
 }
 
 export type Game = {
